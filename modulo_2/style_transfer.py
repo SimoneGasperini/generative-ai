@@ -2,9 +2,8 @@ import os
 import replicate
 
 
-directory = "example"
-content_image = open(f"{directory}/bologna.png", mode="rb")
-style_image = open(f"{directory}/notte_stellata.png", mode="rb")
+content_image = open(f"data/bologna.png", mode="rb")
+style_image = open(f"data/notte_stellata.png", mode="rb")
 
 
 with open("../replicate_api_token.txt") as file:
@@ -17,4 +16,4 @@ out_url = replicate.run(
         "style": style_image
     }
 )
-os.system(command=f'wget -P {directory} {out_url}')
+os.system(command=f'wget -O output_style_transfer.png {out_url}')

@@ -13,4 +13,4 @@ out_url = replicate.run(
     input={"prompt": prompt}
 )[0]
 
-os.system(command=f'wget {out_url}')
+os.system(command=f'wget -O output_text_to_image.png {out_url}')

@@ -2,7 +2,7 @@ import os
 import replicate
 
 
-image = open("sanluca.png", mode="rb")
+image = open("data/san_luca.png", mode="rb")
 
 
 with open("../replicate_api_token.txt") as file:
